@@ -49,8 +49,10 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    # Placeholder empty DataFrame
+    # NOTE: Data loading not implemented yet; placeholder empty DataFrame
     df = pd.DataFrame()
+    
+    # TODO: Implement filtering by month and day
     return df
 
 def time_stats(df):
