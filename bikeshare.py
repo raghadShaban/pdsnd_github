@@ -6,6 +6,15 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+def greet_user():
+    """Greet the user at the start of the program."""
+    print('Hello! Let\'s explore some US bikeshare data!')
+
+def display_elapsed_time(start_time):
+    """Prints the time elapsed since start_time."""
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -15,19 +24,19 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    greet_user()
 
+    # TODO: get user input for city (chicago, new york city, washington)
+    city = 'chicago'  # placeholder
 
-    # get user input for month (all, january, february, ... , june)
+    # TODO: get user input for month (all, january, february, ... , june)
+    month = 'all'  # placeholder
 
-
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-
+    # TODO: get user input for day of week (all, monday, tuesday, ... sunday)
+    day = 'all'  # placeholder
 
     print('-'*40)
     return city, month, day
-
 
 def load_data(city, month, day):
     """
@@ -40,83 +49,52 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-
-
+    # Placeholder empty DataFrame
+    df = pd.DataFrame()
     return df
-
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
-
-    print('\nCalculating The Most Frequent Times of Travel...\n')
+    print('\n--- Calculating The Most Frequent Times of Travel ---\n')
     start_time = time.time()
 
-    # display the most common month
+    # TODO: display the most common month
+    # TODO: display the most common day of week
+    # TODO: display the most common start hour
 
-
-    # display the most common day of week
-
-
-    # display the most common start hour
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    display_elapsed_time(start_time)
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
-
-    print('\nCalculating The Most Popular Stations and Trip...\n')
+    print('\n--- Calculating The Most Popular Stations and Trip ---\n')
     start_time = time.time()
 
-    # display most commonly used start station
+    # TODO: display most commonly used start station
+    # TODO: display most commonly used end station
+    # TODO: display most frequent combination of start station and end station trip
 
-
-    # display most commonly used end station
-
-
-    # display most frequent combination of start station and end station trip
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    display_elapsed_time(start_time)
 
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
-
-    print('\nCalculating Trip Duration...\n')
+    print('\n--- Calculating Trip Duration Stats ---\n')
     start_time = time.time()
 
-    # display total travel time
+    # TODO: display total travel time
+    # TODO: display mean travel time
 
-
-    # display mean travel time
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    display_elapsed_time(start_time)
 
 def user_stats(df):
     """Displays statistics on bikeshare users."""
-
-    print('\nCalculating User Stats...\n')
+    print('\n--- Calculating User Stats ---\n')
     start_time = time.time()
 
-    # Display counts of user types
+    # TODO: Display counts of user types
+    # TODO: Display counts of gender
+    # TODO: Display earliest, most recent, and most common year of birth
 
-
-    # Display counts of gender
-
-
-    # Display earliest, most recent, and most common year of birth
-
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+    display_elapsed_time(start_time)
 
 def main():
     while True:
@@ -132,6 +110,5 @@ def main():
         if restart.lower() != 'yes':
             break
 
-
 if __name__ == "__main__":
-	main()
+    main()
